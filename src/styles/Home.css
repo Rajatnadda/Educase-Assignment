@@ -1,0 +1,37 @@
+.container {
+  max-width: 300px;              
+  margin: auto;    
+  margin-top: 60px;         
+   padding-left: 10px;
+   padding-right: 10px;
+   justify-content:end;
+  display: flex;
+  flex-direction: column;        
+ justify-content: baseline;               
+  min-height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding:20px;
+}
+h1 {    
+  font-family: cursive;
+  font-size: 1.5rem;
+  color: black;
+ 
+
+}
+p {
+    align-items: start;
+  font-family: sans-serif;
+  font-size: 10px;
+  color: #333;
+  line-height: 1.4;
+}
+.container button {
+  width: 100%;
+  margin: 8px 0;
+  background-color: blue;
+}
+hover:container button{
+    background-color: rgb(43, 43, 144);
+}
