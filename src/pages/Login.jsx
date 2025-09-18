@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="w-full min-h-screen flex justify-center bg-[#f9f9f9]">
-      <div className="max-w-sm w-full flex flex-col min-h-screen justify-start px-6">
+      <div className="max-w-sm w-full flex flex-col min-h-screen justify-start px-6 pt-7">
         <h1 className="text-[#1d2226] font-bold text-2xl  mb-2">
           Signin to your <br /> PopX account
         </h1>
