@@ -8,7 +8,7 @@ const Register = () => {
 
   return (
     <div className="w-full min-h-screen flex justify-center bg-white">
-      <div className="max-w-sm w-full flex flex-col min-h-screen justify-between px-6 py-12 ">
+      <div className="max-w-sm w-full flex flex-col min-h-screen justify-between px-6">
         <div>
           <h1 className="text-[#1d2226] font-bold text-2xl mb-6">
             Create your <br /> PopX account
