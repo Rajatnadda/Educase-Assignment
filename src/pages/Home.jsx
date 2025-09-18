@@ -22,13 +22,13 @@ const Home = () => {
             5
           </button>
         </div>
-        <div className="mt-10 mb-6">
+        <div className="mt-7 mb-6">
           <h1 className="text-xl font-bold text-[#32383b]">Welcome to PopX</h1>
           <p className="text-base font-medium text-[#acaeb0]">
             Lorem ipsum dolor sit amet, <br /> Consectetur adipiscing elit,
           </p>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2">
           <Link
             to="/register"
             className="w-full text-white text-center rounded-lg py-3 bg-[#6e26ff] font-medium hover:opacity-90"
