@@ -38,7 +38,7 @@ const Home = () => {
           <button
             className="w-full text-center rounded-lg py-3 bg-[#ccb9fa] font-semibold hover:bg-[#bca5fa]"
           >
-            Already Registered? <a href="/login" className="hover:text-blue-600">Login</a>
+            Already Registered? <Link to="/login" className="hover:text-blue-600">Login</Link>
           </button>
         </div>
       </div>
