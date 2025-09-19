@@ -1,45 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const isDisabled = !email || !password; 
+
   return (
-    <div className="w-full min-h-screen flex justify-center bg-[#f9f9f9]">
-      <div className="max-w-sm w-full flex flex-col min-h-screen justify-start px-6 pt-7">
-        <h1 className="text-[#1d2226] font-bold text-2xl  mb-2">
+    <div className="bg-[#f7f9fa] flex flex-col justify-end m-auto max-w-[46dvh] p-1 px-5 h-[100dvh]">
+      <div className="max-w-sm w-full flex flex-col min-h-screen justify-start pt-7">
+        <h1 className="text-[#1d2226] font-bold text-[26px] pt-3 mb-2">
           Signin to your <br /> PopX account
         </h1>
-            <p className="text-base font-medium text-[#898c8f] mb-8">
+
+        <p className="text-[16px] font-medium text-[#898c8f] mb-6">
           Lorem ipsum dolor sit amet, <br />
           consectetur adipiscing elit.
         </p>
-       <div className="relative mb-6">
-          <label
-            className="absolute -top-2.5 left-3 bg-[#f9f9f9] px-2 text-sm font-semibold text-[#8a4fff]"
-          >
+        <div className="relative mb-5">
+          <label className="absolute -top-2.5 left-3 bg-[#f9f9f9] px-2 text-[12px] font-semibold text-[#8a4fff]">
             Email Address
           </label>
           <input
             type="email"
             placeholder="Enter email address"
-            className="w-full border-1 border-gray-300  text-gray-500 font-medium  rounded-lg py-3 px-4 text-sm"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full border border-gray-300 text-gray-500 font-medium rounded-lg py-2 px-4 text-sm"
           />
         </div>
-        <div className="relative mb-8">
-          <label
-            className="absolute -top-2.5 left-3 bg-[#f9f9f9]  px-2 text-sm font-semibold text-[#8a4fff]"
-          >
+        <div className="relative mb-3">
+          <label className="absolute -top-2.5 left-3 bg-[#f9f9f9] px-2 text-[12px] font-semibold text-[#8a4fff]">
             Password
           </label>
           <input
             type="password"
+            required
             placeholder="Enter password"
-            className="w-full border-1 border-gray-300 text-gray-500 font-medium rounded-lg py-3 px-4 text-sm"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full border border-gray-300 text-gray-500 font-medium rounded-lg py-2 px-4 text-sm"
           />
         </div>
-
         <Link
-          to="/profile"
-          className="w-full text-white rounded-lg text-center  bg-[#cccccc] px-4 py-3 font-semibold cursor-pointer"
+          to={isDisabled ? "#" : "/profile"} 
+          className={`w-full rounded-lg text-center px-4 py-2 font-semibold cursor-pointer transition 
+            ${isDisabled ? "bg-[#cccccc] text-white cursor-not-allowed" : "bg-[#6e26ff] text-white hover:opacity-90"}
+          `}
+          onClick={(e) => isDisabled && e.preventDefault()} // block click
         >
           Login
         </Link>
