@@ -8,7 +8,7 @@ const Login = () => {
   const isDisabled = !email || !password; 
 
   return (
-    <div className="bg-[#f7f9fa] flex flex-col justify-end m-auto max-w-[46dvh] p-1 px-5 h-[100dvh]">
+    <div className="bg-[#f7f9fa] flex flex-col justify-end m-auto max-w-[46dvh] p-1 pt-10 px-5 h-[100dvh]">
       <div className="max-w-sm w-full flex flex-col min-h-screen justify-start pt-7">
         <h1 className="text-[#1d2226] font-bold text-[26px] pt-3 mb-2">
           Signin to your <br /> PopX account
